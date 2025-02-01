@@ -3,6 +3,12 @@
 */
 
 function wait(n) {
+    return new Promise((resolve) =>{
+        setTimeout(resolve, n);
+    });
 }
-
+function callback(){
+    console.log("This text is being printed after 3 second!");
+}
+wait(3000).then(callback)
 module.exports = wait;
